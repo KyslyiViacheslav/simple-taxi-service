@@ -14,13 +14,13 @@ The Taxi Service is a simple web application that support registration, authenti
 - view all drivers.
 
 # Getting Started
-1) Clone the project repository to your local machine, path to your project must contain only english letters. Also, it mustn't contain spaces. In other case Injector won't work correctly.
-2) Install MySQL and Workbench (if you have experience with other DBMS - you can use them, but SQL script wrote for MySQL).
-3) Run the SQL script located in src/main/resources/init_db.sql to initialize the database.
-4) Replace the values of the URL, USERNAME, PASSWORD and JDBC_DRIVER properties with the appropriate values for your database setup.
-5) Build the project using Maven: mvn clean install.
-6) Better install Tomcat 9.0.50. If you decide to install version 10 and above, you should use a different dependency for servlets and JSTL as well.
-7) Deploy the generated WAR file to servlet container such as Tomcat, add deployment 'simple-taxi-service:war exploded'.
+1) Clone the project repository to your local machine, path to your project must contain only english letters. Also, it mustn't contain spaces. **In other case Injector won't work correctly**.
+2) Install **MySQL and Workbench** (if you have experience with other DBMS - you can use them, but SQL script wrote for MySQL).
+3) Run the SQL script located in **src/main/resources/init_db.sql** to initialize the database.
+4) Replace the values of the **URL, USERNAME, PASSWORD and JDBC_DRIVER** properties with the appropriate values for your database setup.
+5) Build the project using Maven: **mvn clean install**.
+6) Better **install Tomcat 9.0.50**. If you decide to install version 10 and above, you should use a different dependency for servlets and JSTL as well.
+7) Deploy the generated WAR file to servlet container such as Tomcat, add deployment '**simple-taxi-service:war exploded**'.
 
 # Structure
 1) controllers - Servlets that handle HTTP requests and responses 
