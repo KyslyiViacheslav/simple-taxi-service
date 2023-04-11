@@ -25,37 +25,36 @@ The Taxi Service is a simple web application that support registration, authenti
 # Structure
 1) controllers - Servlets that handle HTTP requests and responses 
   (controller name - url - function) :
-* LoginController - "/login" - authentication.
-* LogoutController - "/logout" - invalidate current session.
-* IndexController -  "/" - show all corresponding pages.
-* AddCarController -  "/cars/add" - adds a new car.
-* AddDriverToCarController - "/cars/drivers/add" - adds a driver to a certain car.
-* DeleteCarController -  "/cars/delete" - deletes car.
-* GetAllCarsController - "/cars" - views all cars.
-* AddDriverController - "/drivers/add" - adds a driver.
-* DeleteDriverController - "/drivers/delete" - deletes driver.
-* GetAllDriversController - "/drivers" - views all drivers.
-* GetMyCurrentCarsController - "/drivers/cars" - views all cars for the current driver.
-* AddManufacturersController - "/manufacturers/add" - adds new manufacturer.
-* DeleteManufacturerController - "/manufacturers/delete" - deletes manufacturer.
-* GetAllManufacturersController - "GET /manufacturers" - views all manufacturers.
+    * LoginController - "/login" - authentication.
+    * LogoutController - "/logout" - invalidate current session.
+    * IndexController -  "/" - show all corresponding pages.
+    * AddCarController -  "/cars/add" - adds a new car.
+    * AddDriverToCarController - "/cars/drivers/add" - adds a driver to a certain car.
+    * DeleteCarController -  "/cars/delete" - deletes car.
+    * GetAllCarsController - "/cars" - views all cars.
+    * AddDriverController - "/drivers/add" - adds a driver.
+    * DeleteDriverController - "/drivers/delete" - deletes driver.
+    * GetAllDriversController - "/drivers" - views all drivers.
+    * GetMyCurrentCarsController - "/drivers/cars" - views all cars for the current driver.
+    * AddManufacturersController - "/manufacturers/add" - adds new manufacturer.
+    * DeleteManufacturerController - "/manufacturers/delete" - deletes manufacturer.
+    * GetAllManufacturersController - "GET /manufacturers" - views all manufacturers.
 2) dao: Data Access Object interfaces and their implementations, here realized access to database using sql query :
-* CarDaoImpl - implements crud operations, for work with car.
-* DriverDaoImpl - implements crud operations, for work with Driver.
-* ManufacturerDaoImpl - implements crud operations, for work with manufacturer.
+    * CarDaoImpl - implements crud operations, for work with car.
+    * DriverDaoImpl - implements crud operations, for work with Driver.
+    * ManufacturerDaoImpl - implements crud operations, for work with manufacturer.
 3) exception: custom exception
-* AuthenticationException - throws when user add invalid login or password.
-* DataProcessingException - throws in DAO layer, if we can't use some of CRUD operations.
+    * AuthenticationException - throws when user add invalid login or password.
+    * DataProcessingException - throws in DAO layer, if we can't use some of CRUD operations.
 4) lib: Here we have annotations and class which help us to create an instance of class
-* @Dao - annotation for dao implementation.
-* @Service - annotation for service implementation.
-* @Inject - annotation for field which need to initialize and have new instance.
-* Injector - here implements an injector to initialize and return instances.
-
+    * @Dao - annotation for dao implementation.
+    * @Service - annotation for service implementation.
+    * @Inject - annotation for field which need to initialize and have new instance.
+    * Injector - here implements an injector to initialize and return instances.
 5) model: classes that represent data from db
 6) service: Service interfaces and their implementations that perform business logic
-* AuthenticationService - logic for authenticate our user, when he want use our webapp.
-* CarService, DriverService, ManufacturerService - process data in accordance with business logic.
+    * AuthenticationService - logic for authenticate our user, when he want use our webapp.
+    * CarService, DriverService, ManufacturerService - process data in accordance with business logic.
 7) util: Utility class used in a project to create a database connection
 8) filter: Servlet Filters used to intercept requests and responses
 9) resources: Non-Java files such as database scripts and configuration files
